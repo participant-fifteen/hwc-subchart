@@ -9,4 +9,4 @@ appVersion: 1.0
 dependencies:
 - name: hello-world-configmap
   version: 1.0
-  repository: https://raw.githubusercontent.com/n-able-consulting/training-helm-charts/master/charts
+  repository: https://n-able-consulting/training-helm-charts/charts
