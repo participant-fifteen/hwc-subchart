@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dev-hwc-subchart
+  name: test-hwc-subchart
   namespace: argo
 spec:
   project: default
