@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-hwc-subchart
+  namespace: argo
+spec:
+  destination:
+    namespace: test
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: dev/
+    repoURL: https://github.com/participant-fifteen/hwc-subchart
+    targetRevision: master
+  sync:
+    comparedTo:
+      destination:
+        namespace: test
+        server: https://kubernetes.default.svc
+      source:
+        path: dev/
+        repoURL: https://github.com/participant-fifteen/hwc-subchart
+        targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
