@@ -1,4 +1,4 @@
 hello-world-configmap:
-    replicaCount: 10
+    replicaCount: 12
     app:
       content: "Deving rocks!!!"
